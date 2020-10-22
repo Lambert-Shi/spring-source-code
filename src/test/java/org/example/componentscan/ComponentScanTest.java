@@ -12,4 +12,14 @@ public class ComponentScanTest {
             System.out.println("beanName:" + beanName + "===" + "bean对象:" + applicationContext.getBean(beanName));
         }
     }
+
+
+    @Test
+    public void componentScanCustomTest(){
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(ComponentScanCustomConfig.class);
+        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
+        for (String beanName : beanDefinitionNames) {
+            System.out.println("beanName:" + beanName + "===" + "bean对象:" + applicationContext.getBean(beanName));
+        }
+    }
 }

@@ -5,7 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class ComponentScanTest {
     @Test
-    public void test01(){
+    public void componentScanAnnotationTest(){
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(ComponentScanConfig.class);
         String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
         for (String beanName : beanDefinitionNames) {
